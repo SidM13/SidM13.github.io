@@ -81,9 +81,9 @@
 
 .edu-card {
   display: flex;
-  min-height: 250px;
+  min-height: 215px;
   flex-direction: column;
-  padding: 1.75rem;
+  padding: 1.45rem;
   border: 1px solid rgba(174, 188, 211, .22);
   border-radius: 1rem;
   background: rgba(255, 255, 255, .035);
@@ -161,12 +161,12 @@
 }
 
 .edu-card--credentials {
-  min-height: 250px;
+  min-height: 215px;
 }
 
 .credential-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: .55rem;
   margin-top: 1.05rem;
 }
@@ -201,7 +201,11 @@
   }
 
   .edu-card {
-    min-height: 230px;
+    min-height: 205px;
+  }
+
+  .credential-grid {
+    grid-template-columns: 1fr;
   }
 }
 
