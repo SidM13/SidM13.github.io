@@ -23,6 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
   educationStyles.rel = "stylesheet";
   educationStyles.href = `${siteBase}/education-redesign.css?v=20260722-2`;
   document.head.appendChild(educationStyles);
+  const experienceStyles = document.createElement("link");
+  experienceStyles.rel = "stylesheet";
+  experienceStyles.href = `${siteBase}/experience-redesign.css?v=20260821-1`;
+  document.head.appendChild(experienceStyles);
 
   document.querySelectorAll('[style*="opacity:0"]').forEach((element) => {
     element.style.opacity = "1";
@@ -68,6 +72,135 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="about-brief__icon"><img src="${assetBase}/151a2cc95929fc7a.svg" alt=""></div>
             <div><h3>AI-Enabled Transformation</h3><p>Applying AI and business models to drive efficiency, insight, and sustainable impact across organizations.</p></div>
           </article>
+        </div>
+      </div>`;
+  }
+
+  const experienceSection = document.querySelector("#experience");
+  if (experienceSection) {
+    const roles = [
+      {
+        role: "AI Marketing and Sales Intern",
+        company: "Nex3 Consulting Inc.",
+        location: "North Vancouver, BC",
+        period: "Jul 2026 - Present",
+        logo: "nex3.png",
+        darkLogo: true,
+        bullets: [
+          "Migrated the company website from a paid AI platform to a cost-effective local GitHub storage solution.",
+          "Developed marketing materials and sales messaging strategies to strengthen brand positioning and awareness.",
+          "Conducted market research and competitive analysis to identify new sales opportunities.",
+          "Executed targeted marketing campaigns aligned with business objectives and company strategy.",
+          "Collaborated on AI-powered marketing solutions that supported engagement, lead generation, and sales performance.",
+        ],
+        tags: ["AI Marketing", "Sales Strategy", "Market Research", "GitHub"],
+      },
+      {
+        role: "Premium Auditor",
+        company: "EXL Service",
+        location: "San Jose, CA",
+        period: "May 2023 - Oct 2025",
+        logo: "exl.png",
+        darkLogo: true,
+        bullets: [
+          "Completed 500+ premium audits with a strong record of accuracy and timeliness.",
+          "Reviewed 941 filings, profit and loss statements, audit worksheets, and supporting documentation to validate policy charges.",
+          "Improved audit efficiency by collaborating with insureds and agents to accelerate data collection.",
+          "Produced high-quality audit reports using proprietary platforms and advanced Excel functions.",
+          "Built strong client relationships through professional, respectful, and solution-oriented communication.",
+        ],
+        tags: ["Premium Audit", "Advanced Excel", "941 & P&L Review", "Client Management"],
+      },
+      {
+        role: "Student Proctor",
+        company: "Northeastern University",
+        location: "San Jose, CA",
+        period: "Jan 2022 - Apr 2023",
+        logo: "northeastern.png",
+        bullets: [
+          "Supported 10+ professors conducting live remote classes and resolved technical infrastructure issues.",
+          "Monitored virtual presentations and exams to ensure systems remained stable and functional.",
+          "Enforced academic integrity standards across 40+ remote exam sessions with detailed documentation.",
+          "Tracked student attendance, grades, and records supporting faculty reporting needs.",
+          "Resolved technology issues for students and instructors, improving classroom productivity.",
+        ],
+        tags: ["Operations", "Academic Integrity", "Technical Support", "Coordination"],
+      },
+      {
+        role: "Project Management Intern",
+        company: "Oil and Natural Gas Corporation (ONGC)",
+        location: "Delhi, India",
+        period: "Feb 2021 - Apr 2021",
+        logo: "ongc.png",
+        bullets: [
+          "Helped develop a Systematic Operational Plan for ONGC project management functions aligned with standards.",
+          "Documented practices across planning, scheduling, execution, monitoring, and controlling phases.",
+          "Reviewed project requirements and identified scope constraints, risks, and resource dependencies.",
+          "Analyzed project schedules and identified potential delays affecting critical-path activities.",
+          "Coordinated meetings between engineering, operations, and management teams to discuss deliverables.",
+        ],
+        tags: ["PMO", "Governance", "Risk Management", "Documentation"],
+      },
+      {
+        role: "Project Management Intern",
+        company: "Toshiba Water Solutions Pvt Ltd",
+        location: "Gurgaon, India",
+        period: "May 2020 - Jun 2020",
+        logo: "toshiba.png",
+        bullets: [
+          "Reviewed project requirements and created detailed management documentation for a treatment plant.",
+          "Worked with team members to produce detailed progress reports for external clients.",
+          "Built project schedules incorporating resource allocations, timing dependencies, and vendor coordination.",
+          "Tracked project spending against budgets and flagged cost variances and improvement opportunities.",
+          "Documented project processes, decision logs, and lessons learned for future infrastructure projects.",
+        ],
+        tags: ["Project Planning", "Scheduling", "Budget Tracking", "Client Reporting"],
+      },
+      {
+        role: "Social Media Marketing Intern",
+        company: "All Indian Technical and Management Council (AITMC)",
+        location: "Gurgaon, India",
+        period: "May 2020 - Jul 2020",
+        logo: "aitmc.png",
+        bullets: [
+          "Executed three marketing strategies across Facebook, LinkedIn, and Instagram.",
+          "Analyzed social media metrics and engagement data to measure campaign effectiveness.",
+          "Created multi-platform content calendars to maintain consistent brand messaging.",
+          "Researched competitor strategies to identify positioning gaps and differentiation opportunities.",
+          "Built community engagement through comment moderation, customer responses, and follower relationships.",
+        ],
+        tags: ["Social Media", "Content Strategy", "Marketing Analytics", "Community Engagement"],
+      },
+    ];
+
+    const experienceCard = (item) => `
+      <article class="experience-card">
+        <div class="experience-card__header">
+          <div class="experience-card__logo${item.darkLogo ? " experience-card__logo--dark" : ""}">
+            <img src="${assetBase}/experience/${item.logo}" alt="${item.company} logo">
+          </div>
+          <div>
+            <h3 class="experience-card__title">${item.role}</h3>
+            <span class="experience-card__company">${item.company}</span>
+            <span class="experience-card__location">${item.location}</span>
+          </div>
+          <div class="experience-card__period">${item.period}</div>
+        </div>
+        <ul class="experience-card__bullets">
+          ${item.bullets.map((bullet) => `<li>${bullet}</li>`).join("")}
+        </ul>
+        <div class="experience-card__tags">
+          ${item.tags.map((tag) => `<span>${tag}</span>`).join("")}
+        </div>
+      </article>`;
+
+    experienceSection.className = "experience-section";
+    experienceSection.innerHTML = `
+      <div class="experience-section__inner">
+        <div class="experience-section__eyebrow">Career Timeline</div>
+        <h2>Professional <span>Experience</span></h2>
+        <div class="experience-timeline">
+          ${roles.map(experienceCard).join("")}
         </div>
       </div>`;
   }
