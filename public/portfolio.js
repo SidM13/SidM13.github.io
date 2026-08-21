@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         company: "Nex3 Consulting Inc.",
         location: "North Vancouver, BC",
         period: "Jul 2026 - Present",
-        logo: "nex3.png",
+        logo: "nex3-v2.png",
         darkLogo: true,
         bullets: [
           "Migrated the company website from a paid AI platform to a cost-effective local GitHub storage solution.",
