@@ -177,4 +177,8 @@ document.addEventListener("DOMContentLoaded", () => {
       button.setAttribute("aria-expanded", String(!panel.hidden));
     });
   });
+
+  document.querySelectorAll('a[href$="/resume.pdf"]').forEach((link) => {
+    link.setAttribute("download", "Siddharth-Manchanda-Resume.pdf");
+  });
 });
