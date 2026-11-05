@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.head.appendChild(redesignStyles);
   const educationStyles = document.createElement("link");
   educationStyles.rel = "stylesheet";
-  educationStyles.href = `${siteBase}/education-redesign.css?v=20261104-5`;
+  educationStyles.href = `${siteBase}/education-redesign.css?v=20261104-6`;
   document.head.appendChild(educationStyles);
   const experienceStyles = document.createElement("link");
   experienceStyles.rel = "stylesheet";
@@ -307,8 +307,8 @@ document.addEventListener("DOMContentLoaded", () => {
             </article>
             <article class="edu-card edu-card--deeplearning-ai">
               <div class="edu-card__top">
-                <img class="edu-card__logo edu-card__logo--deeplearning" src="${assetBase}/universities/deeplearning-ai.png" alt="DeepLearning.AI logo">
-                <span class="edu-card__label">Course Certificate · 7 Hours</span>
+                <img class="edu-card__logo edu-card__logo--deeplearning" src="${assetBase}/universities/deeplearning-ai-mark.png?v=20261104-1" alt="DeepLearning.AI logo">
+                <span class="edu-card__label">Course Certificate</span>
               </div>
               <h3>AI for Everyone</h3>
               <div class="edu-card__body">Introductory course in artificial intelligence, machine learning, responsible AI, and the organizational application of AI.</div>
@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               <div class="edu-card__meta edu-card__meta--credential">
                 <span>DeepLearning.AI · Coursera · Issued Nov 2025</span>
-                <a class="edu-card__certificate" href="${siteBase}/certificates/ai-for-everyone-certificate.png" target="_blank" rel="noreferrer">View Certificate <span aria-hidden="true">↗</span></a>
+                <a class="edu-card__certificate" href="${siteBase}/certificates/ai-for-everyone-certificate.png?v=20261104-2" target="_blank" rel="noreferrer">View Certificate <span aria-hidden="true">↗</span></a>
               </div>
             </article>
           </div>

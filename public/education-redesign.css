@@ -151,10 +151,10 @@
 }
 
 .edu-card__logo--deeplearning {
-  width: 142px;
+  width: 42px;
   background: #fff;
   object-fit: contain;
-  padding: 8px 10px;
+  padding: 5px;
 }
 
 .edu-card__logo--rockschool {
