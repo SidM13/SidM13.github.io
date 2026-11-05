@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               <div class="edu-card__meta edu-card__meta--credential">
                 <span>DeepLearning.AI · Coursera · Issued Nov 2025</span>
-                <a class="edu-card__certificate" href="${siteBase}/certificates/ai-for-everyone-certificate.png?v=20261104-2" target="_blank" rel="noreferrer">View Certificate <span aria-hidden="true">↗</span></a>
+                <a class="edu-card__certificate" href="${siteBase}/certificates/ai-for-everyone-certificate.png?v=20261104-3" target="_blank" rel="noreferrer">View Certificate <span aria-hidden="true">↗</span></a>
               </div>
             </article>
           </div>
