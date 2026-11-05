@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.head.appendChild(redesignStyles);
   const educationStyles = document.createElement("link");
   educationStyles.rel = "stylesheet";
-  educationStyles.href = `${siteBase}/education-redesign.css?v=20260722-2`;
+  educationStyles.href = `${siteBase}/education-redesign.css?v=20261104-4`;
   document.head.appendChild(educationStyles);
   const experienceStyles = document.createElement("link");
   experienceStyles.rel = "stylesheet";
@@ -32,6 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
     element.style.opacity = "1";
     element.style.transform = "none";
   });
+
+  const heroCredentialLabel = [...document.querySelectorAll("*")].find(
+    (element) => element.children.length === 0 && element.textContent.trim() === "Certifications · CSM · CSPO · SAFe · Six Sigma",
+  );
+  if (heroCredentialLabel) {
+    heroCredentialLabel.textContent = "Professional credentials · Agile · AI · Six Sigma";
+    const heroCredentialNumber = heroCredentialLabel.previousElementSibling;
+    if (heroCredentialNumber) heroCredentialNumber.textContent = "7+";
+  }
 
   const aboutSection = document.querySelector("#about");
   if (aboutSection) {
@@ -247,6 +256,58 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </section>
 
+        <section class="edu-group" aria-labelledby="creative-education-title">
+          <h3 id="creative-education-title" class="edu-group__title">Additional Education &amp; Creative Practice</h3>
+          <div class="edu-grid edu-grid--featured">
+            <article class="edu-card edu-card--trinity">
+              <div class="edu-card__top">
+                <img class="edu-card__logo edu-card__logo--trinity" src="${assetBase}/universities/trinity-college-london.png" alt="Trinity College London logo">
+                <span class="edu-card__label">Level 3 Certificate · Grade 7</span>
+              </div>
+              <h3>Trinity College London</h3>
+              <div class="edu-card__body">Level 3 Certificate in Graded Examination in Rock &amp; Pop: Grade 7 Rock &amp; Pop Guitar.</div>
+              <div class="edu-card__skills" aria-label="Skills">
+                <span>Electric Guitar</span><span>Acoustic Guitar</span><span>Music Performance</span>
+              </div>
+              <div class="edu-card__meta edu-card__meta--credential">
+                <span>Issued Jan 2017</span>
+                <a class="edu-card__certificate" href="${siteBase}/certificates/trinity-grade-7-certificate.pdf" target="_blank" rel="noreferrer">View Certificate <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+            <article class="edu-card edu-card--rockschool">
+              <div class="edu-card__top">
+                <img class="edu-card__logo edu-card__logo--rockschool" src="${assetBase}/universities/rockschool-rsl.png" alt="Rockschool RSL logo">
+                <span class="edu-card__label">Level 3 Certificate · Grade 8</span>
+              </div>
+              <h3>Rockschool</h3>
+              <div class="edu-card__body">RSL Level 3 Certificate in Popular Music Performance: Grade 8 Electric Guitar.</div>
+              <div class="edu-card__achievement">Passed with Merit</div>
+              <div class="edu-card__skills" aria-label="Skills">
+                <span>Electric Guitar</span><span>Popular Music</span><span>Performance</span>
+              </div>
+              <div class="edu-card__meta edu-card__meta--credential">
+                <span>Awarded Nov 2017</span>
+                <a class="edu-card__certificate" href="${siteBase}/certificates/rockschool-grade-8-certificate.pdf" target="_blank" rel="noreferrer">View Certificate <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+            <article class="edu-card edu-card--google-ai">
+              <div class="edu-card__top">
+                <img class="edu-card__logo edu-card__logo--google" src="${assetBase}/universities/google-g.png" alt="Google logo">
+                <span class="edu-card__label">Professional Certificate · 7 Courses</span>
+              </div>
+              <h3>Google AI Professional Certificate</h3>
+              <div class="edu-card__body">Completed Google’s seven-course professional program focused on applying AI to workplace challenges across research, communication, content creation, data analysis, and app building. Developed a portfolio of 20+ practical AI artifacts and a custom AI solution.</div>
+              <div class="edu-card__skills" aria-label="Skills">
+                <span>Generative AI</span><span>Research &amp; Insights</span><span>Data Analysis</span><span>AI App Building</span>
+              </div>
+              <div class="edu-card__meta edu-card__meta--credential">
+                <span>Google Career Certificates · Coursera · Issued Jul 2026</span>
+                <a class="edu-card__certificate" href="${siteBase}/certificates/google-ai-professional-certificate.png" target="_blank" rel="noreferrer">View Certificate <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          </div>
+        </section>
+
         <section class="edu-group" aria-labelledby="continuous-title">
           <h3 id="continuous-title" class="edu-group__title">Professional &amp; Continuous Learning</h3>
           <div class="edu-grid">
@@ -255,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <article class="edu-card edu-card--credentials">
               <div class="edu-card__top"><span class="edu-card__label">Professional Credentials</span></div>
               <div class="credential-grid">
-                ${["Certified Scrum Master (CSM)","Certified Scrum Product Owner (CSPO)","SAFe Agilist","ASQ Six Sigma","Stanford · AI for Business Models","Google AI"].map((item) => `<span>${item}</span>`).join("")}
+                ${["Certified Scrum Master (CSM)","Certified Scrum Product Owner (CSPO)","SAFe Agilist","ASQ Six Sigma","Stanford · AI for Business Models"].map((item) => `<span>${item}</span>`).join("")}
               </div>
             </article>
           </div>

@@ -113,6 +113,91 @@
   background: #fff;
 }
 
+.edu-grid--featured {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.edu-card--trinity,
+.edu-card--rockschool {
+  min-height: 230px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .055), rgba(39, 196, 189, .045));
+}
+
+.edu-card--rockschool {
+  background: linear-gradient(135deg, rgba(255, 255, 255, .055), rgba(64, 151, 214, .075));
+}
+
+.edu-card__logo--trinity {
+  width: 42px;
+  height: 42px;
+  padding: 4px;
+  border-radius: .55rem;
+  background: #fff;
+  object-fit: contain;
+}
+
+.edu-card--google-ai {
+  background: linear-gradient(145deg, rgba(255, 255, 255, .045), rgba(66, 133, 244, .065));
+}
+
+.edu-card__logo--google {
+  background: #fff;
+  object-fit: contain;
+  padding: 6px;
+}
+
+.edu-card__logo--rockschool {
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, .12);
+  background: #0e8cc5;
+  object-fit: cover;
+}
+
+.edu-card__achievement {
+  width: fit-content;
+  margin-top: .8rem;
+  padding: .35rem .65rem;
+  border: 1px solid rgba(39, 196, 189, .42);
+  border-radius: .45rem;
+  background: rgba(39, 196, 189, .1);
+  color: #70ddd6;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.edu-card__meta--credential {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edu-card__certificate {
+  color: #70ddd6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.edu-card__certificate:hover {
+  color: #fff;
+}
+
+.edu-card__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: 1rem;
+}
+
+.edu-card__skills span {
+  padding: .35rem .6rem;
+  border: 1px solid rgba(39, 196, 189, .28);
+  border-radius: 999px;
+  background: rgba(39, 196, 189, .08);
+  color: rgba(247, 248, 252, .8);
+  font-size: .72rem;
+}
+
 .edu-card__label {
   font-size: .68rem;
   line-height: 1.35;
