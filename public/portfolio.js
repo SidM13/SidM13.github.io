@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.head.appendChild(redesignStyles);
   const educationStyles = document.createElement("link");
   educationStyles.rel = "stylesheet";
-  educationStyles.href = `${siteBase}/education-redesign.css?v=20261104-4`;
+  educationStyles.href = `${siteBase}/education-redesign.css?v=20261104-5`;
   document.head.appendChild(educationStyles);
   const experienceStyles = document.createElement("link");
   experienceStyles.rel = "stylesheet";
@@ -303,6 +303,21 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="edu-card__meta edu-card__meta--credential">
                 <span>Google Career Certificates · Coursera · Issued Jul 2026</span>
                 <a class="edu-card__certificate" href="${siteBase}/certificates/google-ai-professional-certificate.png" target="_blank" rel="noreferrer">View Certificate <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+            <article class="edu-card edu-card--deeplearning-ai">
+              <div class="edu-card__top">
+                <img class="edu-card__logo edu-card__logo--deeplearning" src="${assetBase}/universities/deeplearning-ai.png" alt="DeepLearning.AI logo">
+                <span class="edu-card__label">Course Certificate · 7 Hours</span>
+              </div>
+              <h3>AI for Everyone</h3>
+              <div class="edu-card__body">Introductory course in artificial intelligence, machine learning, responsible AI, and the organizational application of AI.</div>
+              <div class="edu-card__skills" aria-label="Skills">
+                <span>AI Literacy</span><span>Machine Learning</span><span>Responsible AI</span>
+              </div>
+              <div class="edu-card__meta edu-card__meta--credential">
+                <span>DeepLearning.AI · Coursera · Issued Nov 2025</span>
+                <a class="edu-card__certificate" href="${siteBase}/certificates/ai-for-everyone-certificate.png" target="_blank" rel="noreferrer">View Certificate <span aria-hidden="true">↗</span></a>
               </div>
             </article>
           </div>

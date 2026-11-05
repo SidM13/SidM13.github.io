@@ -140,10 +140,21 @@
   background: linear-gradient(145deg, rgba(255, 255, 255, .045), rgba(66, 133, 244, .065));
 }
 
+.edu-card--deeplearning-ai {
+  background: linear-gradient(145deg, rgba(255, 255, 255, .045), rgba(255, 72, 97, .055));
+}
+
 .edu-card__logo--google {
   background: #fff;
   object-fit: contain;
   padding: 6px;
+}
+
+.edu-card__logo--deeplearning {
+  width: 142px;
+  background: #fff;
+  object-fit: contain;
+  padding: 8px 10px;
 }
 
 .edu-card__logo--rockschool {
