@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span class="edu-card__label">Professional Certificate · 7 Courses</span>
               </div>
               <h3>Google AI Professional Certificate</h3>
-              <div class="edu-card__body">Completed Google’s seven-course professional program focused on applying AI to workplace challenges across research, communication, content creation, data analysis, and app building. Developed a portfolio of 20+ practical AI artifacts and a custom AI solution.</div>
+              <div class="edu-card__body">Seven-course professional certificate in applied AI, covering research, communication, content creation, data analysis, and AI-powered app building.</div>
               <div class="edu-card__skills" aria-label="Skills">
                 <span>Generative AI</span><span>Research &amp; Insights</span><span>Data Analysis</span><span>AI App Building</span>
               </div>
